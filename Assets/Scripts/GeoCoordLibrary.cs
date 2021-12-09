@@ -1,0 +1,42 @@
+using UnityEngine;
+
+public class GeoCoordLibrary : ScriptableObject {
+	public GeoCoord[] coords = new GeoCoord[] {
+		new GeoCoord() { name="" , latitude=0 , longitude=0 } ,
+		new GeoCoord() { name="Reykjavík", latitude=64.1335484f, longitude=-21.9224813f},
+		new GeoCoord() { name="Kraków", latitude=50.0468548f, longitude=19.9348336f},
+		new GeoCoord() { name="Paris", latitude=48.8589507f, longitude=2.2770204f},
+		new GeoCoord() { name="Buenos Aires", latitude=-34.6156625f, longitude=-58.503338f},
+		new GeoCoord() { name="Ho Chi Minh", latitude=10.7553411f, longitude=106.4150395f},
+		new GeoCoord() { name="İstanbul", latitude=41.0054958f, longitude=28.8720965f},
+		new GeoCoord() { name="Nairobi", latitude=-1.3030364f, longitude=36.7773568f},
+		new GeoCoord() { name="Dublin", latitude=53.3244431f, longitude=-6.3857857f},
+		new GeoCoord() { name="London", latitude=51.5287718f, longitude=-0.2416804f},
+		new GeoCoord() { name="New York", latitude=40.6976637f, longitude=-74.119764f},
+		new GeoCoord() { name="Starbase", latitude=25.9884963f, longitude=-97.1632233f},
+		new GeoCoord() { name="Vancouver", latitude=49.2578263f, longitude=-123.1939434f},
+		new GeoCoord() { name="Honolulu", latitude=21.1579153f, longitude=-158.5605044f},
+		new GeoCoord() { name="Mumbai", latitude=19.0825223f, longitude=72.7411016f},
+		new GeoCoord() { name="Tehran", latitude=35.6970118f, longitude=51.2097352f},
+		new GeoCoord() { name="Hongkong", latitude=22.3529913f, longitude=113.9876156f},
+		new GeoCoord() { name="Sydney", latitude=-33.8479255f, longitude=150.6511036f},
+		new GeoCoord() { name="Dakar", latitude=14.7110139f, longitude=-17.5360369f},
+		new GeoCoord() { name="Natal", latitude=-4.8730191f, longitude=-34.9832028f},
+		new GeoCoord() { name="Ushuaia", latitude=-54.8228355f, longitude=-68.3797813f},
+		new GeoCoord() { name="Caracas", latitude=10.4683841f, longitude=-66.9605778f},
+		new GeoCoord() { name="Cape Town", latitude=-33.9152193f, longitude=18.3751883f},
+		new GeoCoord() { name="Якутск", latitude=62.0312622f, longitude=129.5613624f},
+		new GeoCoord() { name="Roma", latitude=41.9099856f, longitude=12.3955715f},
+		new GeoCoord() { name="Gibraltar", latitude=36.129508f, longitude=-5.3708525f},
+		new GeoCoord() { name="Longyearbyen", latitude=79.2639353f, longitude=4.3014832f},
+		new GeoCoord() { name="Lima", latitude=-12.0185972f, longitude=-77.1280131f},
+		new GeoCoord() { name="Santiago", latitude=-33.4727088f, longitude=-70.7702586f},
+		new GeoCoord() { name="Atqasuk", latitude=70.539337f, longitude=-157.9874001f},
+		new GeoCoord() { name="Douala", latitude=4.0359007f, longitude=9.6715926f},
+		new GeoCoord() { name="Stazione Mario Zucchelli", latitude=-74.6958608f, longitude=164.0881707f},
+		new GeoCoord() { name="Alert", latitude=82.5058286f, longitude=-62.5571841f},
+
+		new GeoCoord() { name="Vienna p0", latitude=48.195932f, longitude=16.339999f},
+		new GeoCoord() { name="Vienna p1", latitude=48.202385f, longitude=16.361278f},
+	};
+}

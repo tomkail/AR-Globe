@@ -1,0 +1,155 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c0f8f6e4e04948fe9b9b78605eccad9, type: 3}
+  m_Name: GeoCoordLibrary
+  m_EditorClassIdentifier: 
+  coords:
+  - latitude: 0
+    longitude: 0
+    alt: 0
+    name: 
+  - latitude: 64.133545
+    longitude: -21.922482
+    alt: 0
+    name: "Reykjav\xEDk"
+  - latitude: 50.046856
+    longitude: 19.934834
+    alt: 0
+    name: "Krak\xF3w"
+  - latitude: 48.85895
+    longitude: 2.2770205
+    alt: 0
+    name: Paris
+  - latitude: -34.61566
+    longitude: -58.503338
+    alt: 0
+    name: Buenos Aires
+  - latitude: 10.755342
+    longitude: 106.41504
+    alt: 0
+    name: Ho Chi Minh
+  - latitude: 41.005497
+    longitude: 28.872097
+    alt: 0
+    name: "\u0130stanbul"
+  - latitude: -1.3030365
+    longitude: 36.777355
+    alt: 0
+    name: Nairobi
+  - latitude: 53.324444
+    longitude: -6.3857856
+    alt: 0
+    name: Dublin
+  - latitude: 51.52877
+    longitude: -0.2416804
+    alt: 0
+    name: London
+  - latitude: 40.697662
+    longitude: -74.11977
+    alt: 0
+    name: New York
+  - latitude: 25.988497
+    longitude: -97.16322
+    alt: 0
+    name: Starbase
+  - latitude: 49.257828
+    longitude: -123.19395
+    alt: 0
+    name: Vancouver
+  - latitude: 21.157915
+    longitude: -158.5605
+    alt: 0
+    name: Honolulu
+  - latitude: 19.082521
+    longitude: 72.741104
+    alt: 0
+    name: Mumbai
+  - latitude: 35.69701
+    longitude: 51.209736
+    alt: 0
+    name: Tehran
+  - latitude: 22.352991
+    longitude: 113.98762
+    alt: 0
+    name: Hongkong
+  - latitude: -33.847927
+    longitude: 150.65111
+    alt: 0
+    name: Sydney
+  - latitude: 14.711014
+    longitude: -17.536037
+    alt: 0
+    name: Dakar
+  - latitude: -4.873019
+    longitude: -34.983204
+    alt: 0
+    name: Natal
+  - latitude: -54.822834
+    longitude: -68.37978
+    alt: 0
+    name: Ushuaia
+  - latitude: 10.468384
+    longitude: -66.96058
+    alt: 0
+    name: Caracas
+  - latitude: -33.91522
+    longitude: 18.375189
+    alt: 0
+    name: Cape Town
+  - latitude: 62.03126
+    longitude: 129.56136
+    alt: 0
+    name: "\u042F\u043A\u0443\u0442\u0441\u043A"
+  - latitude: 41.909985
+    longitude: 12.395572
+    alt: 0
+    name: Roma
+  - latitude: 36.12951
+    longitude: -5.3708525
+    alt: 0
+    name: Gibraltar
+  - latitude: 79.26394
+    longitude: 4.301483
+    alt: 0
+    name: Longyearbyen
+  - latitude: -12.018598
+    longitude: -77.12801
+    alt: 0
+    name: Lima
+  - latitude: -33.47271
+    longitude: -70.770256
+    alt: 0
+    name: Santiago
+  - latitude: 70.53934
+    longitude: -157.9874
+    alt: 0
+    name: Atqasuk
+  - latitude: 4.0359006
+    longitude: 9.671593
+    alt: 0
+    name: Douala
+  - latitude: -74.69586
+    longitude: 164.08817
+    alt: 0
+    name: Stazione Mario Zucchelli
+  - latitude: 82.50583
+    longitude: -62.557182
+    alt: 0
+    name: Alert
+  - latitude: 48.19593
+    longitude: 16.339998
+    alt: 0
+    name: Vienna p0
+  - latitude: 48.202385
+    longitude: 16.361279
+    alt: 0
+    name: Vienna p1
