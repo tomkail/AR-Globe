@@ -1,5 +1,5 @@
-[System.Serializable]
-public class CountryGeoData {
-    public string name;
+using UnityEngine;
+
+public class CountryGeoData : ScriptableObject {
     public RegionGeoData[] geoRegions;
 }

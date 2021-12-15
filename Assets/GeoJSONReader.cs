@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
@@ -18,16 +19,20 @@ public class GeoJSONReader : MonoBehaviour {
         // var json = JsonConvert.DeserializeObject(textAsset.text);
         // using (JsonTextReader reader = new JsonTextReader(textAsset.text)) {
         // }
+        var subObjects = AssetDatabaseX.GetSubObjectsOfTypeAsScriptableObjects<CountryGeoData>(worldGeoData);
+        foreach(var subObject in subObjects) {
+            Object.DestroyImmediate(subObject, true);
+        }
         JObject o = (JObject)JToken.Parse(textAsset.text);
         List<CountryGeoData> countryDataList = new List<CountryGeoData>();
         List<RegionGeoData> geoRegionsList = new List<RegionGeoData>();
-        List<GeoCoord> geoCoordsList = new List<GeoCoord>();
+        var pathOfWorldGeoData = AssetDatabase.GetAssetPath(worldGeoData);
         foreach(var countryObj in o["features"]) {
-            geoCoordsList.Clear();
+            geoRegionsList.Clear();
             
-            var countryData = new CountryGeoData();
+            var countryData = ScriptableObject.CreateInstance<CountryGeoData>();
+            AssetDatabase.AddObjectToAsset(countryData, pathOfWorldGeoData);
             countryData.name = countryObj["properties"]["ADMIN"].ToObject<string>();
-            Debug.Log(countryData.name);
 
             foreach(var coords in countryObj["geometry"]["coordinates"]) {
                 TryBuild(coords);
@@ -37,27 +42,20 @@ public class GeoJSONReader : MonoBehaviour {
             countryDataList.Add(countryData);
         }
         worldGeoData.countryGeoData = countryDataList.ToArray();
+        AssetDatabase.ImportAsset(pathOfWorldGeoData);
+        
         void TryBuild (JToken maybeCoordSet) {
-            foreach(var coordSet in maybeCoordSet) {
-                if(coordSet[0][0].Type == JTokenType.Float) {
-                    ParseCoordSet(coordSet);
-                } else {
+            if(maybeCoordSet[0][0].Type == JTokenType.Float) {
+                ParseCoordSet(maybeCoordSet);
+            } else {
+                foreach(var coordSet in maybeCoordSet) {
                     TryBuild(coordSet);
                 }
             }
-            // Debug.Log(maybeCoordSet);
-            // foreach(var coordSet in maybeCoordSet) {
-            //     var maybeCoord = coordSet;
-            //     Debug.Log(maybeCoord);
-            //     if(maybeCoord.Type == JTokenType.Array) {
-            //         TryBuild(maybeCoordSet);
-            //     } else {
-            //         ParseCoordSet(maybeCoord);
-            //     }
-            // }
         }
 
         void ParseCoordSet (JToken coordSet) {
+            List<GeoCoord> geoCoordsList = new List<GeoCoord>();
             int i = 0;
             foreach(var coord in coordSet) {
                 if(i%pointsToSkip == 0) {
@@ -74,6 +72,5 @@ public class GeoJSONReader : MonoBehaviour {
             r.geoCoords = geoCoordsList.ToArray();
             geoRegionsList.Add(r);
         }
-    }
-    
+    } 
 }

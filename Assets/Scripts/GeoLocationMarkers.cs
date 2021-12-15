@@ -11,6 +11,7 @@ public class GeoLocationMarkers : MonoBehaviour {
 		locationMarkerPrefab.gameObject.SetActive(true);
 		foreach(var coord in coordLibrary.coords) {
 			var locationMarker = Object.Instantiate<LocationMarker>(locationMarkerPrefab, Vector3.zero, Quaternion.identity, transform);
+			locationMarker.gameObject.name = coord.name;
 			locationMarker.coord = coord;
 			locationMarker.gameObject.SetActive(true);
 			locationMarkers.Add(locationMarker);
